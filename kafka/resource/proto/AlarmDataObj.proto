@@ -1,0 +1,51 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 报警数据对象
+message AlarmData{
+	
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//设备编号
+	string deviceId = 3;
+	
+	//设备状态
+	string deviceStatus = 4;
+	
+	//设备类型
+	int32 deviceType = 5;
+	
+	//设备功能类型
+	int32 deviceFunType = 6;
+	
+	//报警类型
+	int32 alarmType = 7;
+	
+	//报警类型描述
+	string alarmTypeCN = 8;
+	
+	//报警详情信息
+	string alarmMsg = 9;
+	
+	//报警时间
+	int64 alarmTime = 10;
+	
+	//报警复位时间
+	int64 restTime = 11;
+	
+	//备注
+	string note = 12;
+	
+	//接入时间
+	int64 accessTime = 13;
+
+}
+
+// 报警数据对象列表
+message AlarmDataList{
+	repeated AlarmData alarmlist =1;
+}

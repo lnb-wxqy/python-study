@@ -1,0 +1,99 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+import "SubImageInfoObj.proto";
+import "NonMotorVehicleObj.proto";
+import "MotorVehicleObj.proto";
+import "FaceObj.proto";
+import "PersonObj.proto";
+
+message AllTypeMessage {
+
+    // 每条数据唯一标识
+    string recordId = 1;
+
+    //业务ID
+    string businessId = 2;
+
+    //信息分类
+    int32 infoKind = 3;
+
+    //来源标识
+    string sourceId = 4;
+
+    //抓拍时间
+    int64 absTime = 5;
+
+    //设备编号
+    string deviceId = 6;
+
+    //车道编号
+    string drivewayNo = 7;
+
+    //卡口ID
+    string tollgateId = 8;
+
+    //车道号
+    int32 laneNO = 9;
+
+    //推送时间
+    int64 pushTime = 10;
+
+    //来源类型
+    int32 sourceType = 11;
+
+    //场景图地址
+    string imgUrl = 12;
+
+    //置信度
+    double confidence = 13;
+
+    //数据来源厂商
+    string infoSource = 14;
+
+    //算法版本
+    string algorithmVersion = 15;
+
+    //算法厂家
+    int32 algorithmVendor= 16;
+
+    //是否二次结构化
+    int32 isSecondaryStructure = 17;
+
+    //数据来源
+    int32 source = 18;
+
+    //图像列表
+    repeated SubImageInfo subImageList = 19;
+
+    //二次识别次数
+    int32 structureNum = 20;
+
+    //接入时间
+    int64 accessTime = 21;
+
+    //二次结构化来源
+    int32 structureSource = 22;
+
+    //渗透字段信息
+    string additionalInfo = 23;
+
+    //结构化时间
+    int64 structureTime = 24;
+
+    //识别出的人脸集合
+    FaceList faceList = 25;
+
+    //识别出的人体集合
+    PersonList personList = 26;
+
+    //识别出的机动车集合
+    NonMotorVehicleList nonMotorVehicleList = 27;
+
+    //识别出的非机动车集合
+    MotorVehicleList motorVehicleList = 28;
+}
+
+// 全目标对象列表
+message AllTypeList{
+    repeated AllTypeMessage allTypeList = 1;
+}

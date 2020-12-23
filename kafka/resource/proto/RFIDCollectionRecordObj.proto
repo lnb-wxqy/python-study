@@ -1,0 +1,67 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+//RFID采集记录
+message RFIDCollectionRecord{
+	
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//设备编号
+	string deviceId = 3;
+	
+	//设备类型
+	string deviceType = 4;
+	
+	//设备名称
+	string deviceName = 5;
+	
+	//经度
+	double longitude = 6;
+	
+	//纬度
+	double latitude = 7;
+	
+	//设备IP地址
+	string deviceIp = 8;
+	
+	//rfid标签编码
+	string rfidCode = 9;
+	
+	//rfid标签名称
+	string rfidName = 10;
+	
+	//标签类型
+	string rfidType = 11;
+	
+	//rfid状态信息
+	string rfidStatus = 12;
+	
+	//rfid品牌/厂商
+	string rfidBrand = 13;
+	
+	//抓拍时间
+	int64 absTime = 14;
+	
+	//进入时间
+	int64 startTime = 15;
+	
+	//出去时间
+	int64 endTime = 16;
+	
+	//入库时间
+	int64 entryTime = 17;
+	
+	//接入时间
+	int64 accessTime = 18;
+
+}
+
+//RFID采集记录列表
+message RFIDCollectionRecordList{
+
+	repeated RFIDCollectionRecord rfidList = 1;
+}

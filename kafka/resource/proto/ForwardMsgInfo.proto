@@ -1,0 +1,70 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+//转发日志消息体
+message ForwardMsg{
+
+	//唯一标识
+	string Id = 1;
+	
+	//转发平台ID
+	string platformId = 2;
+	
+	//转发组件ID
+	string componentId = 3;
+	
+	//数据类型
+	string dataType = 4;
+	
+	//场所id
+	string orgId = 5;
+	
+	//资源id
+	string resourceId = 6;
+	
+	//车道id
+	string laneId = 7;
+	
+	//是否结构化数据
+	int32 isStructure = 8;
+	
+	//转发详情
+	repeated ForwardDetails forwardDetails = 9;
+	
+	//转发时间
+	int64 forwardTime = 10;
+	
+	//卡口ID
+	string tollgateID = 11;
+	
+	//设备ID
+	string deviceID = 12;
+
+	//接入标识：用来识别这一路转发日志是全量，可以当做接入日志来处理
+	string accessMark = 13;
+
+	//数据转发状态：-1失败，1：成功，0：无需转发
+	int32 forwardState = 14;
+
+	//数据转发失败原因
+	string forwardFailReason = 15;
+}
+
+//转发详情
+message ForwardDetails{
+
+	//标识
+	string recordId = 1;
+	
+	//数据产生时间
+	int64 passTime = 2;
+
+	//数据接入时间
+	int64 accessTime = 3;
+}
+
+message ForwardMsgList{
+
+	//转发列表
+	repeated ForwardMsg forwardlist =1;
+}

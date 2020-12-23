@@ -22,7 +22,7 @@ class FirstMainWin(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     # 设置图标
-    app.setWindowIcon(QIcon('./images/dragon.png'))
+    app.setWindowIcon(QIcon('./images/dragon.ico'))
     main = FirstMainWin()
     main.show()
     sys.exit(app.exec_())

@@ -1,0 +1,45 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 定位设备采集记录
+message LocationCollectionRecord{
+
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//设备编号
+	string deviceId = 3;
+	
+	//经度
+	double longitude = 4;
+	
+	//纬度
+	double latitude = 5;
+	
+	//高度
+	double altitude = 6;
+	
+	//方向
+	string direction = 7;
+	
+	//速度
+	string velocity = 8;
+	
+	//位置描述
+	string locDesc = 9;
+	
+	//定位时间
+	int64 locationTime = 10;
+	
+	//接入时间
+	int64 accessTime = 11;
+
+}
+
+// 定位设备采集记录列表
+message LocationCollectionRecordList{
+	repeated LocationCollectionRecord localtionlist = 1;
+}

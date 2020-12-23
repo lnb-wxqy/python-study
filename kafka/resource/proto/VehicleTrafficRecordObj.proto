@@ -1,0 +1,51 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 车辆通行记录
+message VehicleTrafficRecord{
+
+	//场所编号
+	string placeId = 1;
+	
+	//记录标识
+	string recordId = 2;
+	
+	//业务ID
+	string businessId = 3;
+	
+	//卡口id
+	string tollgateID = 4;
+	
+	//摄像机id
+	string cameraId = 5;
+	
+	//车牌号
+	string plateNo = 6;
+	
+	//通行时间
+	int64 inOutTime = 7;
+	
+	//进出类型
+	int32 inOutType = 8;
+	
+	//通道名称
+	string channelName = 9;
+	
+	//过车图片
+	string platePic = 10;
+	
+	//车牌号图片
+	string plateNoPic = 11;
+	
+	//记录入库时间
+	int64 rowTime = 12;
+	
+	//接入时间
+	int64 accessTime = 13;
+
+}
+
+// 车辆通行记录列表
+message VehicleTrafficRecordList{
+	repeated VehicleTrafficRecord trafficlist = 1;
+}

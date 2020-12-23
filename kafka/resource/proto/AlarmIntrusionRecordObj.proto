@@ -1,0 +1,77 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+
+// CK对象
+message CK{
+
+	//小区编码
+	string placeCode = 1;
+	
+	//用户编号
+	string userNo = 2;
+	
+	//防区编号
+	string defenceAreaNo = 3;
+	
+	//防区位置
+	string defenceAreaPlace = 4;
+	
+	//防区类型
+	string defenceAreaType = 5;
+	
+	//报警类型
+	string alarmType = 6;
+	
+	//报警详情
+	string alarmDesc = 7;
+	
+	//报警时间
+	int64 alarmTime = 8;
+	
+	//处理结果
+	string dealResult = 9;
+	
+	//出警
+	string treatCases = 10;
+	
+	//用户名称
+	string userName = 11;
+	
+	//用户地址
+	string userAddress = 12;
+	
+	//用户类型
+	string userType = 13;
+	
+	//负责人
+	string chargePersonName = 14;
+	
+	//负责人电话
+	string chargePersonTelphone = 15;
+	
+	//派出所
+	string police = 16;
+	
+	//经度
+	double lon = 17;
+	
+	//纬度
+	double lat = 18;
+	
+	//坐标类型
+	int32 coordType = 19;
+	
+	//安装时间
+	int64 installTime = 20;
+
+	//记录编号
+	string recordId = 21;
+	
+	//业务ID
+	string businessId = 22;
+	
+	//设备编号
+	string deviceId = 23;
+
+}

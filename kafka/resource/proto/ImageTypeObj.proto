@@ -1,0 +1,37 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+//图片类型
+enum ImageType{
+	Other = 0;
+	//车辆大图
+	VehicleImage = 1;
+	//号牌小图
+	PlateImage = 2;
+	//车牌二值化图
+	PlateBinaryzationImage = 3;
+	//驾驶员人脸图
+	DriverFaceImage = 4;
+	//副驾驶人脸图
+	CopilotFaceImage = 5;
+	//车标
+	VehicleLogoImage = 6;
+	//违章图
+	IllegalImage = 7;
+	//车辆合成图
+	VehicleSynthesisImage = 8;
+	//车辆特征图
+	VehicleFeatureImage = 9;
+	//人体图
+	PersonImage = 10;
+	//人脸图
+	FaceImage = 11;
+	//非机动车图
+	NonMotorVehicleImage = 12;
+	//物品图
+	GoodsImage = 13;
+	//场景图
+	SceneImage = 14;
+	// 普通图
+	OrdinaryImage = 15;
+}

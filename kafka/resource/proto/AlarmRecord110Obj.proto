@@ -1,0 +1,227 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+
+// 机动车对象
+message AlarmRecord110{
+	  
+
+	//小区编号  
+	string villageCode = 1;
+	//记录唯一编号  
+	string recordId = 2;
+	//案件编号  
+	string caseId = 3;
+	//报警电话类型  
+	string inboundCallTypeId = 4;
+	//报警电话编号  
+	string inboundCallId = 5;
+	//报警时间  
+	string inboundTime = 6;
+	//报警座机号码  
+	string callerNo = 7;
+	//报警手机号码  
+	string calleeNo = 8;
+	//接警工号  
+	string callOperatorId = 9;
+	//接警人姓名  
+	string callOperatorName = 10;
+	//录音号  
+	string agentRecordId = 11;
+	//报警人姓名  
+	string callerName = 12;
+	//报警人性别  
+	string callerSex = 13;
+	//报警人所属单位  
+	string callerCompany = 14;
+	//报警人传真号码  
+	string callerFaxNo = 15;
+	//报警人邮箱地址  
+	string callerEmailAddress = 16;
+	//报警人所在地址  
+	string callerAddress = 17;
+	//案发时间  
+	string occurTime = 18;
+	//案发地点坐标X  
+	string coordinateX = 19;
+	//案发地点坐标Y  
+	string coordinateY = 20;
+	//案发地址道路名称  
+	string roadName = 21;
+	//案发地址交叉路口名称  
+	string crossRoadName = 22;
+	//案发地址  
+	string caseAddress = 23;
+	//建筑名称  
+	string siteName = 24;
+	//所属辖区  
+	string precinctName = 25;
+	//巡区编号  
+	string beatId = 26;
+	//警情标题  
+	string title = 27;
+	//案件分类号  
+	string caseCategoryId = 28;
+	//案件描述  
+	string caseDesc = 29;
+	//案件状态编号  
+	string caseStatusId = 30;
+	//更新时间  
+	string updateTime = 31;
+	//数据生成时间  
+	string createTime = 32;
+	//记录入库时间(新增或更新)(东八区)  
+	string mrowTime = 33;
+	//案件所属区块  
+	string qyzrhf = 34;
+	//坐标体系,参考附录字典  
+	string coordType = 35;
+	//百度经度  
+	string baidu_longitude = 36;
+	//百度纬度  
+	string baidu_latitude = 37;
+	//高德经度  
+	string gaode_longitude = 38;
+	//高德纬度  
+	string gaode_latitude = 39;
+	//警情推送  
+	string type = 40;
+	//案由名称  
+	string aymc = 41;
+	//警情类别名称  
+	string jqlbmc = 42;
+	//警情类型名称  
+	string jqlxmc = 43;
+	//警情细类名称  
+	string jqxlmc = 44;
+	//定位标志物  
+	string dwbzw = 45;
+	//行政区划  
+	string xzqh = 46;
+	//接警单位编号  
+	string jjdwbh = 47;
+	//所属分局  
+	string ssfj = 48;
+	//辖区单位  
+	string xqdw = 49; 
+	//警种  
+	string jz = 50;
+	//处理类型  
+	string cllx = 51;
+	//警情级别  
+	string jqjb = 52;
+	//案由  
+	string ay = 53;
+	//关联事件单号  
+	string glsjdbh = 54;
+	//出警单位  
+	string cjdw = 55;
+	//处理结果  
+	string cljg = 56;
+	//事件处理情况  
+	string sjclqk = 57;
+	//事件状态  
+	string sjzt = 58;
+	//首次受理结束时间  
+	string scsljssj = 59;
+	//事发地址分类  
+	string sfdzfl = 60;
+	//首次受理单编号  
+	string scsldbh = 61;
+	//是否匿名  
+	string sfnm = 62;
+	//接警员编号  
+	string jjybh = 63;
+	//首次报警方式  
+	string scbjfs = 64;
+	//首次接警台号  
+	string scjjth = 65;
+	//首次接警单位  
+	string scjjdwbh = 66;
+	//首次接警台号  
+	string scjjtip = 67;
+	//首次受理时间  
+	string scslsj = 68;
+	//首次处置开始时间  
+	string scczkssj = 69;
+	//首次指令下达时间  
+	string sczlxdsj = 70;
+	//首次派警单位  
+	string scpjdw = 71;
+	//首批出警单位  
+	string spcjdw = 72;
+	//首次派警意见  
+	string sccjcs = 73;
+	//首次派警单编号  
+	string sccjdbh = 74;
+	//累计派警情况  
+	string ljpjqk = 75;
+	//首次反馈人  
+	string scfkr = 76;
+	//首次反馈单位  
+	string scfkdw = 77;
+	//首次反馈时间  
+	string scfksj = 78;
+	//首次反馈内容  
+	string scfknr = 79;
+	//首次反馈单编号  
+	string scfkdbh = 80;
+	//累计反馈情况  
+	string ljfknr = 81;
+	//是否反馈终结  
+	string sffkzj = 82;
+	//有无危险物质  
+	string ywwxwz = 83;
+	//有无爆炸泄漏  
+	string ywbzxl = 84;
+	//被困人员情况说明  
+	string bkryqksm = 85;
+	//受伤人员情况说明  
+	string ssryqksm = 86;
+	//伤亡人员情况说明  
+	string swryqksm = 87;
+	//报警号码  
+	string zjhm = 88;
+	//警情类别代码  
+	string jqlbdm = 89;
+	//警情类型代码  
+	string jqlxdm = 90;
+	//警情细类代码  
+	string jqxldm = 91;
+	//警情级别代码  
+	string jqjbdm = 92;
+	//重大警情标志  
+	string zdbz = 93;
+	//所属辖区代码  
+	string ssxqdm = 94;
+	//所在街区代码  
+	string szjqdm = 95;
+	//事发地址分类名称  
+	string sfdzflmc = 96;
+	//接警台号  
+	string jjth = 97;
+	//接警台IP  
+	string jjtip = 98;
+	//辖区单位名称  
+	string xqdwmc = 99;
+	//所属分局名称  
+	string ssfjmc = 100;
+	//首次接警单位名称  
+	string scjjdwmc = 101;
+	//首次派警单位名称  
+	string scpjdwmc = 102;
+	//首次反馈单位名称  
+	string scfkdwmc = 103;
+	//警情标签ID  
+	string jqbqid = 104;
+	//警情标签名称  
+	string jqbqmc = 105;
+
+	int32 id = 106;
+}
+
+	
+	// 机动车对象列表
+message AlarmRecord110List{
+	repeated AlarmRecord110 alarmrecord = 1;
+}

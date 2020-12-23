@@ -1,0 +1,11 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 发送kafka数据格式
+message KafkaMessageData{
+	string datatype = 1;
+	bytes data = 2;
+	string topic = 3;
+	int64 partition = 4;
+	bytes header = 5;
+}

@@ -1,0 +1,58 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+import "SubImageInfoObj.proto";
+
+// 门禁通行记录
+message AccessRecord{
+
+	//场所编号
+	string placeId = 1;
+	
+	//记录标识
+	string recordId = 2;
+	
+	//业务ID
+	string businessId = 3;
+	
+	//设备id
+	string deviceId = 4;
+	
+	//楼栋编号，单元编号
+	string buildingNo = 5;
+	
+	//房屋编号
+	string houseNo = 6;
+	
+	//卡号
+	string cardNo = 7;
+	
+	//证件类型
+	string credentialType = 8;
+	
+	//证件号码
+	string credentialNo = 9;
+	
+	//开门时间
+	int64 openTime = 10;
+	
+	//开门方式
+	int32 openType = 11;
+	
+	//记录入库时间
+	int64 mrowTime = 12;
+	
+	//接入时间
+	int64 accessTime = 13;
+	
+	//场景图地址
+	string sceneImg = 14;
+	
+	//图像列表
+	repeated SubImageInfo subImageList = 15;
+}
+
+// 门禁通行记录列表
+message AccessRecordList{
+	repeated AccessRecord accesslist = 1;
+}

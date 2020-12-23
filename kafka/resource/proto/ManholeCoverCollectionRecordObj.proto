@@ -1,0 +1,33 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 窨井盖采集记录
+message ManholeCoverCollectionRecord{
+	
+	//场所编号
+	string placeId = 1;
+	
+	//记录编号
+	string recordId	= 2;
+	
+	//业务ID
+	string businessId = 3;
+	
+	//设备编号
+	string deviceId = 4;
+	
+	//报警类型
+	string alarmType = 5;
+	
+	//报警时间
+	int64 alarmTime = 6;
+	
+	//接入时间
+	int64 accessTime = 7;
+
+}
+
+// 窨井盖采集记录列表
+message ManholeCoverCollectionRecordList{
+	repeated ManholeCoverCollectionRecord manholelist = 1;
+}

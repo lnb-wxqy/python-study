@@ -1,0 +1,126 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+//RFID采集记录
+message GPSCollectionRecord{
+
+	//记录标识
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2; 
+	
+	//设备编号
+	string deviceId = 3;
+	
+	//设备编码
+	string gpsCode = 4;
+	
+	//设备类型
+	string gpsType = 5;
+	
+	//采集时间
+	int64 absTime = 6;
+	
+	//推送时间
+	int64 pushTime = 7;
+	
+	//组织编号
+	string orgId = 8;
+	
+	//所属对象ID(0警员 1警车 2出租车)
+	string objectId = 9;
+	
+	//联系方式
+	string contactInfo = 10;
+	
+	//经度
+	double longitude = 11;
+	
+	//纬度
+	double latitude = 12;
+	
+	//速度
+	string speed = 13;
+	
+	//速度附加信息
+	string speedExt = 14;
+	
+	//方向
+	string direction = 15;
+	
+	//高度:m
+	string high = 16;
+	
+	//状态
+	string state = 17;
+	
+	//状态附加信息
+	string stateExt = 18;
+	
+	//报警
+	string alarm = 19;
+	
+	//报警附加信息
+	string alarmExt = 20;
+	
+	//里程0.1km
+	string mileAge = 21;
+	
+	//油表0.1L
+	string fuel = 22;
+	
+	//信号状态
+	string signalState = 23;
+	
+	//事件类型
+	string eventType = 24;
+	
+	//标志位
+	string flag = 25;
+	
+	//数据来源
+	string source = 26;
+	
+	//创建时间
+	int64 createTime = 27;
+	
+	//接入时间
+	int64 accessTime = 28;
+	
+	//证件类型
+	string certificateType = 29;
+	
+	//单位代码
+	string unitCode = 30;
+	
+	//地点
+	string address = 31;
+	
+	//职位
+	string position = 32;
+	
+	//性别
+	string gender = 33;
+	
+	//邮箱
+	string mailBox = 34;
+	
+	//警号/车牌号码
+	string pcNumber = 35;
+
+	//单位
+	string policeUnit = 36;
+	
+	//名称（姓名）
+	string name = 37;
+	
+	//身份证号码
+	string idCard = 38;
+	
+}
+
+//RFID采集记录列表
+message GPSCollectionRecordList{
+	repeated GPSCollectionRecord gpslist = 1;
+}

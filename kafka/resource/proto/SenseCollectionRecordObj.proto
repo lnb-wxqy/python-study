@@ -1,0 +1,48 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+// 传感采集记录
+message SenseCollectionRecord{
+
+	//场所编号
+	string placeId = 1;
+	
+	//记录编号
+	string recordId = 2;
+	
+	//业务ID
+	string businessId = 3;
+	
+	//传感设备编号
+	string sensorDeviceId = 4;
+	
+	//传感器编号
+	string sensorNo = 5;
+	
+	//传感器类型
+	int32 type = 6;
+	
+	//名称
+	string name = 7;
+	
+	//数值单位
+	string unit = 8;
+	
+	//数值单位符号
+	string symbol = 9;
+	
+	//采集数据值
+	string value = 10;
+	
+	//数据采集时间
+	int64 collectTime = 11;
+	
+	//接入时间
+	int64 accessTime = 12;
+     
+}
+
+// 传感采集记录列表
+message SenseCollectionRecordList{
+	repeated SenseCollectionRecord senselist = 1;
+}

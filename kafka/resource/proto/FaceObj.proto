@@ -1,0 +1,227 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+import "SubImageInfoObj.proto";
+import "RelatedInfoObj.proto";
+
+// 人脸对象
+message Face{
+
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//信息分类
+	int32 infoKind = 3;
+	
+	//来源标识
+	string sourceId = 4;
+	
+	//左上角X坐标
+	int32 leftTopX = 5;
+	
+	//左上角Y坐标
+	int32 leftTopY = 6;
+	
+	//右下角X坐标
+	int32 rightBtmX = 7;
+	
+	//右下角Y坐标
+	int32 rightBtmY = 8;
+	
+	//抓拍时间
+	int64 absTime = 9;
+	
+	//设备编号
+	string deviceId = 10;
+	
+	//推送时间
+	int64 pushTime = 11;
+	
+	//来源类型
+	int32 sourceType = 12;
+	
+	//特征图地址
+	string traitImg = 13;
+	
+	//场景图地址
+	string sceneImg = 14;
+	
+	//目标出现时间
+	int64 startTime = 15;
+	
+	//目标消失时间
+	int64 endTime = 16;
+	
+	//置信度
+	double confidence = 17;
+	
+	//入库时间
+	int64 entryTime = 18;
+	
+	//任务类型
+	string taskType = 19;
+	
+	//数据来源厂商
+	string infoSource = 20;
+	
+	//算法版本
+	string algorithmVersion = 21;
+
+	//算法厂家
+	int32 algorithmVendor = 22;
+	
+	//特征向量
+	string eigenvector = 23;
+	
+	//是否二次结构化
+	int32 isSecondaryStructure = 24;
+
+	//结构化时间
+	int64 structureTime  = 25;
+	
+	//全目标关联关系ID
+	string collectionId = 26;
+	
+	//渗透字段信息
+	string additionalInfo = 27;
+	
+	//数据来源
+	int32 source = 28;
+	
+	//比中人员编号
+	string personId = 29;
+	
+	//比中分数
+	double score = 30;
+	
+	//主副驾标识
+	int32 driverFlag = 31;
+	
+	//VID可读编号
+	string vidNum = 32;
+	
+	//身份是否确认
+	int32 isIdentify = 33;
+	
+	//删除标记
+	int32 deleteFlag = 34;
+	
+	//年龄
+	int32 age = 35;
+	
+	//人脸位置
+	string location = 36;
+	
+	//人脸扩展位置
+	string traitLocation = 37;
+	
+	//存储时间
+	int64 saveTime = 38;
+	
+	//颜值
+	int32 attractive = 39;
+	
+	//性别
+	int32 gender = 40;
+	
+	//微笑值
+	int32 smile = 41;
+	
+	//表情
+	int32 expression = 42;
+	
+	//是否戴眼镜
+	int32 eyeglass = 43;
+	
+	//是否戴太阳镜
+	int32 sunglass = 44;
+	
+	//是否戴口罩
+	int32 mask = 45;
+
+	//图像列表
+	repeated SubImageInfo subImageList = 46;
+	
+	//二次识别次数
+	int32 structureNum = 47;
+	
+	//接入时间
+	int64 accessTime = 48;
+	
+	//民族
+	int32 ethnic = 49;
+	
+	//头部标识
+	int32 headMarker = 50;
+	
+	//运动方向
+	int32 moveDirection = 51;
+	
+	//运动速度
+	int32 moveSpeed = 52;
+	
+	//二次结构化来源
+	int32 structureSource = 53;
+	
+	//图片ID
+	string imageId = 54;
+	
+	//图片类型
+	int32 imageType = 55;
+	
+	//图片格式
+	int32 imageFormat = 56;
+	
+	//肤色
+	int32 skinColour = 57;
+	
+	//年龄段
+	int32 ageSegment = 58;
+	
+	//扩展字段
+	string Ext = 59;
+	
+	//关联对象类型
+	string relatedType = 60;
+	
+	//关联对象信息
+	repeated RelatedInfo relatedList = 61;
+	
+	//设备经度【固定点位设备可选填，移动设备必填】
+	double lon = 62;
+	
+	//设备纬度【固定点位设备可选填，移动设备必填】
+	double lat = 63;
+	
+	//是否戴帽子
+	int32 isCap = 64;
+	
+	//标记
+	int32 dataMarks = 65;
+	
+	//轨迹
+	string traceInfo = 66;
+	
+	//事件代码
+	string eventCode = 67;
+	
+	//视频地址
+	string videoUrl = 68;
+	
+	//违法合成图1
+	string picUrl1st = 69;
+	
+	//违法合成图2
+	string picUrl2nd = 70;
+	
+	//扩展字段
+	map<string,string> extMaps = 71;
+	
+}
+//人脸列表
+message FaceList{
+ repeated Face facelist =1; 
+}

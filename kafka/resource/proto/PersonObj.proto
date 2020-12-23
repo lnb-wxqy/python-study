@@ -1,0 +1,235 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+import "SubImageInfoObj.proto";
+import "RelatedInfoObj.proto";
+
+// 人体对象
+message Person{
+
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//信息分类
+	int32 infoKind = 3;
+	
+	//来源标识
+	string sourceId = 4;
+	
+	//左上角X坐标
+	int32 leftTopX = 5;
+	
+	//左上角Y坐标
+	int32 leftTopY = 6;
+	
+	//右下角X坐标
+	int32 rightBtmX = 7;
+	
+	//右下角Y坐标
+	int32 rightBtmY = 8;
+	
+	//抓拍时间
+	int64 absTime = 9;
+	
+	//设备编号
+	string deviceId = 10;
+	
+	//推送时间
+	int64 pushTime = 11;
+	
+	//来源类型
+	int32 sourceType = 12;
+	
+	//特征图地址
+	string traitImg = 13;
+	
+	//场景图地址
+	string sceneImg = 14;
+	
+	//目标出现时间
+	int64 startTime = 15;
+	
+	//目标消失时间
+	int64 endTime = 16;
+	
+	//置信度
+	double confidence = 17;
+	
+	//入库时间
+	int64 entryTime = 18;
+	
+	//任务类型
+	string taskType = 19;
+
+	//数据来源厂商
+	string infoSource = 20;
+	
+	//算法版本
+	string algorithmVersion = 21;
+
+	//算法厂家
+	int32 algorithmVendor= 22;
+	
+	//特征向量
+	string eigenvector = 23;
+	
+	//是否二次结构化
+	int32 isSecondaryStructure = 24;
+
+	//结构化时间
+	int64 structureTime = 25;
+
+	//全目标关联关系ID
+	string collectionId = 26;
+
+	//渗透字段信息
+	string additionalInfo = 27;
+	
+	//数据来源
+	int32 source = 28;
+	
+	//年龄
+	int32 age = 29;
+	
+	//颜值
+	int32 attractive = 30;
+	
+	//性别
+	int32 gender = 31;
+	
+	//微笑值
+	int32 smile = 32;
+	
+	//表情
+	int32 expression = 33;
+	
+	//是否戴眼镜
+	int32 eyeglass = 34;
+	
+	//是否戴太阳镜
+	int32 sunglass = 35;
+	
+	//是否戴口罩
+	int32 mask = 36;
+
+	//头部标识
+	int32 headMarker = 37;
+
+	//包类型
+	int32 bagType = 38;
+
+	//上身纹理
+	int32 upTexture = 39;
+
+	//上身颜色
+	int32 upColor = 40;
+
+	//下身类型
+	int32 downType = 41;
+
+	//下身颜色
+	int32 downColor = 42;
+
+	//人脸位置
+	string location = 43;
+
+	//人脸扩展位置
+	string traitLocation = 44;
+
+	//存储时间
+	int64 saveTime = 45;
+
+	//比中人员编号
+	string personId = 46;
+
+	//比中分数
+	double score = 47;
+
+	//图像列表
+	repeated SubImageInfo subImageList = 48;
+	
+	//二次识别次数
+	int32 structureNum = 49;
+	
+	//接入时间
+	int64 accessTime = 50;
+	
+	//运动方向
+	int32 moveDirection = 51;
+	
+	//运动速度
+	int32 moveSpeed = 52;
+	
+	//二次结构化来源
+	int32 structureSource = 53;
+	
+	//发型类别
+	int32 hairstyle = 54;
+	
+	//行为分析
+	int32 behavior = 55;
+	
+	//附属物
+	int32 appendix = 56;
+	
+	//鞋子颜色
+	int32 shoeColour = 57;
+	
+	//鞋子类别
+	int32 shoeType = 58;
+	
+	//上身类型
+	int32 upperBodyType = 59;
+	
+	//民族
+	int32 ethnic = 60;
+	
+	//年龄段
+	int32 ageSegment = 61;
+	
+	//扩展字段
+	string Ext = 62;
+	
+	//关联对象类型
+	string relatedType = 63;
+	
+	//关联对象信息
+	repeated RelatedInfo relatedList = 64;
+	
+	//设备经度【固定点位设备可选填，移动设备必填】
+	double lon = 65;
+	
+	//设备纬度【固定点位设备可选填，移动设备必填】
+	double lat = 66;
+	
+    //人体朝向属性
+    int32 personDirection = 67;
+    
+    //背包位置
+    int32 backpack = 68;
+    
+    //是否背包
+    int32 isBackpack = 69;
+    
+    //是否戴帽子
+    int32 isCap = 70;
+    
+    //标记
+	int32 dataMarks = 71;
+	
+	//非机动车轨迹
+	string traceInfo = 72;
+	
+	//扩展字段
+	map<string,string> extMaps = 73;
+}
+
+
+// 人体对象列表
+message PersonList{
+
+	repeated Person personlist = 1;
+}

@@ -1,0 +1,234 @@
+syntax = "proto3";//这个版本的protoc的protobuf编译器已经可以支持proto2语法和proto3的语法
+package protobuf;
+
+import "SubImageInfoObj.proto";
+import "RelatedInfoObj.proto";
+
+// 非机动车对象
+message NonMotorVehicle{
+
+	//记录编号
+	string recordId = 1;
+	
+	//业务ID
+	string businessId = 2;
+	
+	//车辆标识
+	string nonMotorVehicleID = 3;
+	
+	//信息分类
+	int32 infoKind = 4;
+	
+	//来源标识
+	string sourceId = 5;
+	
+	//抓拍时间
+	int64 absTime = 6;
+	
+	//设备编号
+	string deviceId = 7;
+	
+	//来源类型
+	int32 sourceType = 8;
+	
+	//左上角X坐标(车体的轮廓外接矩形在画面中的位置)
+	int32 leftTopX = 9;
+	
+	//左上角Y坐标(车体的轮廓外接矩形在画面中的位置)
+	int32 leftTopY = 10;
+	
+	//右下角X坐标(车体的轮廓外接矩形在画面中的位置)
+	int32 rightBtmX = 11;
+	
+	//右下角Y坐标(车体的轮廓外接矩形在画面中的位置)
+	int32 rightBtmY = 12;
+	
+	//车牌左上角X坐标
+	int32 headLeftTopX = 13;
+	
+	//车牌左上角y坐标
+	int32 headLeftTopY = 14;
+	
+	//车牌右下角X坐标
+	int32 headRightBtmX = 15;
+	
+	//车牌右下角y坐标
+	int32 headRightBtmY = 16;
+	
+	//性别
+	int32 gender = 17;
+	
+	//有无车牌
+	string hasPlate = 18;
+	
+	//号牌种类
+	string plateClass = 19;
+	
+	//车牌颜色
+	string plateColor = 20;
+	
+	//车牌号
+	string plateNo = 21;
+	
+	//非机动车车身颜色
+	int32 nonmotorColor = 22;
+	
+	//非机动车类型
+	int32 nonmotorType = 23;
+	
+	//上身类型
+	int32 upType = 24;
+	
+	//上身颜色
+	int32 upColor = 25;
+	
+	//上身纹理
+	int32 upTexture = 26;
+	
+	//下身类型
+	int32 downType = 27;
+	
+	//下身颜色
+	int32 downColor = 28;
+	
+	//下身纹理
+	int32 downTexture = 29;
+	
+	//包类型
+	int32 bagType = 30;
+	
+	//包颜色
+	int32 bagColor = 31;
+	
+	//包纹理
+	int32 bagTexture = 32;
+	
+	//非机动车轨迹
+	string traceInfo = 33;
+	
+	//人体特征
+	string bodyFeature = 34;
+	
+	//非机动车出现时间
+	int64 startTime = 35;
+	
+	//非机动车离开时间
+	int64 endTime = 36;
+	
+	//特征图地址
+	string traitImg = 37;
+	
+	//场景图地址
+	string sceneImg = 38;
+	
+	//民族
+	int32 ethnic = 39;
+	
+	//非机动车角度
+	int32 nonmotorAngle = 40;
+	
+	//推送时间
+	int64 pushTime = 41;
+	
+	//入库时间
+	int64 entryTime = 42;
+	
+	//移动方向
+	int32 moveDirection = 43;
+	
+	//移动速度
+	int32 moveSpeed = 44;
+	
+	//载人情况
+	int32 illageBehavior = 45;
+	
+	//头部标识
+	int32 headMarker = 46;
+	
+	//任务类型
+	string taskType = 47;
+	
+	//数据来源厂商
+	string infoSource = 48;
+	
+	//算法版本
+	string algorithmVersion = 49;
+
+	//算法厂家
+	int32 algorithmVendor = 50;
+	
+	//特征向量
+	string eigenvector = 51;
+	
+	//是否二次结构化
+	int32 isSecondaryStructure = 52;
+
+	//结构化时间
+	int64 structureTime = 53;
+	
+	//全目标关联关系ID
+	string collectionId = 54;
+	
+	//渗透字段信息
+	string additionalInfo = 55;
+	
+	//数据来源
+	int32 source = 56;
+	
+	//图像列表
+	repeated SubImageInfo subImageList = 57;
+	
+	//二次识别次数
+	int32 structureNum = 58;
+	
+	//接入时间
+	int64 accessTime = 59;
+	
+	//二次结构化来源
+	int32 structureSource = 60;
+	
+	//卡口ID
+	string tollgateId = 61;
+	
+	//车道号
+	int32 laneNO = 62;
+	
+	//车道编号
+	string drivewayNo = 63;
+	
+	//扩展字段
+	string ext = 64;
+	
+	//关联对象类型
+	string relatedType = 65;
+	
+	//关联对象信息
+	repeated RelatedInfo relatedList = 66;
+	
+	//设备经度【固定点位设备可选填，移动设备必填】
+	double longitude = 67;
+	
+	//设备纬度【固定点位设备可选填，移动设备必填】
+	double latitude = 68;
+	
+	//违章类型
+	string violationType = 69;
+	
+	//人体属性信息
+	string personInfoList = 70;
+	
+	//骑车类型
+	string cyclingType = 71;
+	
+	//标记
+	int32 dataMarks = 72;
+	
+	//扩展字段
+	map<string,string> extMaps = 73;
+}
+
+// 非机动车对象列表
+message NonMotorVehicleList{
+
+	repeated NonMotorVehicle nonVehiclelist = 1;
+}
